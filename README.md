@@ -1,0 +1,2 @@
+# big-data-AWS-Data-Analytics
+AWS Academy Data Analytics is a foundational course for AWS Academy participants who plan to pursue careers in data analytics. The course helps learners develop skills with AWS services that are critical for conducting analysis of big data problems. The course consists of a series of labs that you can integrate with your existing courses on data mining, data analysis, or data science.
