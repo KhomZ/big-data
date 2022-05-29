@@ -1,0 +1,50 @@
+Lab1
+s3 creation
+amazon athena data analysis
+
+
+
+
+Lab2
+
+
+arn:aws:s3:::c49615a736749l2201142t1w256101446900-s3bucket-dyby9t43gj0n
+
+ARN
+
+
+assignment
+Theory::
+
+
+2022
+
+1. per person data generation
+2. hours spent/ per person => 6hrs 58 sec 
+3. tweets per second
+4. youtube upload/minute or sec => 500 hours
+5. AWS Mobile user
+6. Datageneration/per day
+
+7. Facebook active user per day => 1.93 bllion daily
+
+facebook data generation dper day
+Facebook generates 4 petabytes of data per day — that's a million gigabytes.
+https://medium.com/@srank2000/how-facebook-handles-the-4-petabyte-of-data-generated-per-day-ab86877956f4#:~:text=Facebook%20generates%204%20petabytes%20of,day%20%E2%80%94%20that's%20a%20million%20gigabytes.
+
+8. Youtube Active user per day 
+9. nepal Mobile users
+10. Nepal Bandwidth consumption
+
+microsoft data generation per day
+
+google data generation per day
+
+
+
+statistica.com
+
+
+airbus/boeing flight data generation per second
+
+20 TB / hour
