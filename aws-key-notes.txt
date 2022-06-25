@@ -1,0 +1,18 @@
+ec2-35-172-114-180.compute-1.amazonaws.com 
+
+
+
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value><nnode>:9000</value>
+  </property>
+</configuration>
+
+
+
+
+<property>
+    <name>fs.defaultFS</name>
+    <value><ec2-35-172-114-180.compute-1.amazonaws.com>:9000</value>
+  </property>
