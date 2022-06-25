@@ -53,24 +53,24 @@ We will now create 4 instances of Ubuntu Server 16.04 LTS using Amazon EC2.
 
 # Select Instance
 Go to your AWS Console, Click on Launch Instance and select Ubuntu Server 16.04 LTS.
-![Select Instance](ADA-Sandbox/ec2-1.jpg)
+![Select Instance](ec2-1.jpg)
 
 
 # Instance Type
 For the instance type, we choose t2.micro since that is sufficient for the purposes of the demo. If you have a need for a high-memory or high-cpu instance, you can select one of those.
-![Instance Type](ADA-Sandbox/ec2-2.jpg)
+![Instance Type](ec2-2.jpg)
 
 Click Next to Configure Instance Details
 
 # Instance Details
 Here, we request 4 instances of the selected machine type. We also choose a subnet (us-west-1b) just so we can launch into the same location if we need more machines.
-![Instance Type](ADA-Sandbox/ec2-3-700.jpg)
+![Instance Type](ec2-3-700.jpg)
 
 Click Next to Add Storage
 
 # Storage
 For our purpose, the default instance storage of 8GB is sufficient. If you need more storage, either increase the size or attach a disk by clicking “Add Volume”. If you add a volume, you will need to attach the volume to your instance, format it and mount it. Since this is a beginner tutorial, these steps are not covered here.
-![Instance Type](ADA-Sandbox/ec2-4-700.jpg)
+![Instance Type](ec2-4-700.jpg)
 
 Click Next to Add Tags to your instances.
 
@@ -78,19 +78,19 @@ Click Next to Add Tags to your instances.
 A tag allows you to identify your instance with a name you can choose.
 
 Click Add Tag, set the Key to “Name” and value to “Hadoop”. We will use this tag to re-label our instances as “namenode”, “datanode1” and so on later on. For now leave the value of all the instances as “Hadoop”.
-![Instance Type](ADA-Sandbox/ec2-5.jpg)
+![Instance Type](ec2-5.jpg)
 
 Click Next to configure Security Group for the instances.
 
 # Security Group
 For the security group, we create a completely open security group for the purposes of testing.
-![Instance Type](ADA-Sandbox/ec2-7-700.jpg)
+![Instance Type](ec2-7-700.jpg)
 
 Finally we get to the Launch screen.
 
 # Launch Instances
 Review the information again and click Launch to start the instances. You will need to create a key pair or use an existing key pair. Follow the instructions on the Launch Wizard to create a new key pair. Then click “I acknowledge ..” and then Launch Instances.
-![Instance Type](ADA-Sandbox/ec2-8.jpg)
+![Instance Type](ec2-8.jpg)
 
 You can now go to the instances page and check on the status of the instances.
 
@@ -98,7 +98,7 @@ You can now go to the instances page and check on the status of the instances.
 On the instances page, let us setup the names of the instances. These are not DNS names, but names we assign to help us distinguish between them.
 
 Click the pencil icon next to the name and setup the names as shown.
-![Instance Type](ADA-Sandbox/ec2-9.jpg)
+![Instance Type](ec2-9.jpg)
 
 # Setting Up Instances
 Once the instances are up and running, it is time to set them up for our purpose. This includes the following:
@@ -127,7 +127,7 @@ Let us update the OS with latest available software patches.
 `sudo apt-get update && sudo apt-get -y dist-upgrade`
 
 After the updates, the system might require a restart. Perform a Reboot from the EC2 Instances page.
-![Instance Type](ADA-Sandbox/ec2-10.jpg)
+![Instance Type](ec2-10.jpg)
 
 # All Nodes: Install Java
 Let us now install Java. We install the package: openjdk-8-jdk-headless on all the nodes.
@@ -153,17 +153,21 @@ With the following line:
 
 # All Nodes: Update `core_site.xml`
 On each node, edit `~/server/hadoop-2.7.3/etc/hadoop/core-site.xml` and replace the following lines:
-`<configuration>
-</configuration>`
+`
+<configuration>
+</configuration>
+`
 
 with these (as mentioned above, replace <nnode> with NameNode’s public DNS):
 
-`<configuration>
+`
+<configuration>
   <property>
     <name>fs.defaultFS</name>
     <value><nnode>:9000</value>
   </property>
-</configuration>`
+</configuration>
+`
 
 # All Nodes: Create Data Dir
 HDFS needs the data directory to be present on each node: 1 name node and 3 data nodes. Create this directory as shown and change ownership to user ubuntu.
