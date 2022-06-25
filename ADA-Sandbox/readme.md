@@ -1,39 +1,47 @@
 # How to Setup an Apache Hadoop Cluster on AWS EC2
 
 ## Contents
-Introduction
-Pre-Requisites
-AWS EC2 Startup
-    Select Instance
-    Instance Type
-    Instance Details
-    Storage
-    Instance Tags
-    Security Group
-    Launch Instances
-    Naming the Instances
-Setting Up Instances
-    Copy Instance Public DNS Name
-Common Setup on All Nodes
-    All Nodes: Install Java
-    All Nodes: Install Apache Hadoop
-    All Nodes: Setup JAVA_HOME
-    All Nodes: Update core_site.xml
-    All Nodes: Create Data Dir
-Configuring NameNode
-    Namenode: Password Less SSH
-    Datanode: Setup Public Key
-    Namenode: Setup SSH Config
-    Namenode: Setup HDFS Properties
-    Namenode: Setup MapReduce Properties
-    Namenode: Setup YARN Properties
-    Namenode: Setup Master and Slaves
-Configuring Data Nodes
-Starting the Hadoop Cluster
-    Check the Web UI
-Summary
+1. Introduction
 
-# Introduction
+2. Pre-Requisites
+
+3. AWS EC2 Startup
+*    Select Instance
+*    Instance Type
+*    Instance Details
+*    Storage
+*    Instance Tags
+*    Security Group
+*    Launch Instances
+*    Naming the Instances
+
+4. Setting Up Instances
+*    Copy Instance Public DNS Name
+
+5. Common Setup on All Nodes
+*    All Nodes: Install Java
+*    All Nodes: Install Apache Hadoop
+*    All Nodes: Setup JAVA_HOME
+*    All Nodes: Update core_site.xml
+*    All Nodes: Create Data Dir
+
+6. Configuring NameNode
+*    Namenode: Password Less SSH
+*    Datanode: Setup Public Key
+*    Namenode: Setup SSH Config
+*    Namenode: Setup HDFS Properties
+*    Namenode: Setup MapReduce Properties
+*    Namenode: Setup YARN Properties
+*    Namenode: Setup Master and Slaves
+
+7. Configuring Data Nodes
+
+8. Starting the Hadoop Cluster
+*    Check the Web UI
+
+9. Summary
+
+# 1. Introduction
 Lets talk about how to setup an Apache Hadoop cluster on AWS.
 
 In a previous article, we discussed setting up a Hadoop processing pipeline on a single node (laptop). That involved running all the components of Hadoop on a single machine. In the setup we discuss here, we setup a multi-node cluster to run processing jobs.
@@ -45,36 +53,36 @@ Starting with setting up the AWS EC2 resources, we take you all the way through 
 
 We use Apache Hadoop 2.7.3 for this demonstration.
 
-# Pre-Requisites
+# 2. Pre-Requisites
 Sign up for an AWS account if you don’t already have one. You get some resources free for the first year, including an EC2 Micro Instance.
 
-# AWS EC2 Startup
+# 3. AWS EC2 Startup
 We will now create 4 instances of Ubuntu Server 16.04 LTS using Amazon EC2.
 
-# Select Instance
+# 4. Select Instance
 Go to your AWS Console, Click on Launch Instance and select Ubuntu Server 16.04 LTS.
 ![Select Instance](ec2-1.jpg)
 
 
-# Instance Type
+# 5. Instance Type
 For the instance type, we choose t2.micro since that is sufficient for the purposes of the demo. If you have a need for a high-memory or high-cpu instance, you can select one of those.
 ![Instance Type](ec2-2.jpg)
 
 Click Next to Configure Instance Details
 
-# Instance Details
+# 6. Instance Details
 Here, we request 4 instances of the selected machine type. We also choose a subnet (us-west-1b) just so we can launch into the same location if we need more machines.
 ![Instance Type](ec2-3-700.jpg)
 
 Click Next to Add Storage
 
-# Storage
+# 7. Storage
 For our purpose, the default instance storage of 8GB is sufficient. If you need more storage, either increase the size or attach a disk by clicking “Add Volume”. If you add a volume, you will need to attach the volume to your instance, format it and mount it. Since this is a beginner tutorial, these steps are not covered here.
 ![Instance Type](ec2-4-700.jpg)
 
 Click Next to Add Tags to your instances.
 
-# Instance Tags
+# 8. Instance Tags
 A tag allows you to identify your instance with a name you can choose.
 
 Click Add Tag, set the Key to “Name” and value to “Hadoop”. We will use this tag to re-label our instances as “namenode”, “datanode1” and so on later on. For now leave the value of all the instances as “Hadoop”.
@@ -82,7 +90,7 @@ Click Add Tag, set the Key to “Name” and value to “Hadoop”. We will use 
 
 Click Next to configure Security Group for the instances.
 
-# Security Group
+# 9. Security Group
 For the security group, we create a completely open security group for the purposes of testing.
 ![Instance Type](ec2-7-700.jpg)
 
@@ -364,5 +372,5 @@ You can also check on the datanodes for java processes.
 # Check the Web UI
 Once the cluster is running, we can check the web UI for the status of the data nodes. Go to <nnode>:50070 for the Web UI and verify that the 3 data nodes added are online.
 
-# Summary
+# 9. Summary
 This article showed you how to setup Apache Hadoop on an Amazon EC2 cluster. Starting  with standard Ubuntu 16.04 LTS instances, we configured the machines with Java and Apache Hadoop. Next we covered setting up various Hadoop components according to the role on each node. In the next article in this series on Apache Hadoop, we look into running jobs on the cluster.
