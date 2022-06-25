@@ -135,12 +135,14 @@ Let us now install Java. We install the package: openjdk-8-jdk-headless on all t
 `sudo apt-get -y install openjdk-8-jdk-headless`
 
 # All Nodes: Install Apache Hadoop
-Install Apache Hadoop 2.7.3 on all the instances. Obtain the link to download from the ![Apache website](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz) and run the following commands. We install Hadoop under a directory `server` in the home directory.
+Install Apache Hadoop 2.7.3 on all the instances. Obtain the link to download from the [[Apache website]](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz) and run the following commands. We install Hadoop under a directory `server` in the home directory.
 
-`mkdir server
+`
+mkdir server
 cd server
 wget <Link to Hadoop 2.7.3>
-tar xvzf hadoop-2.7.3.tar.gz`
+tar xvzf hadoop-2.7.3.tar.gz
+`
 
 # All Nodes: Setup JAVA_HOME
 On each of the nodes, edit `~/server/hadoop-2.7.3/etc/hadoop/hadoop-env.sh`.
