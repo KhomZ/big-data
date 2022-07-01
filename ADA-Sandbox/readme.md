@@ -145,18 +145,19 @@ Let us now install Java. We install the package: openjdk-8-jdk-headless on all t
 * # All Nodes: Install Apache Hadoop
 Install Apache Hadoop 2.7.3 on all the instances. Obtain the link to download from the [[Apache website]](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz) and run the following commands. We install Hadoop under a directory `server` in the home directory.
 
-`
-mkdir server
+`mkdir server`
 
-cd server
+`cd server`
 
-wget <Link to Hadoop 2.7.3>
+`wget <Link to Hadoop 2.7.3>`
 
-tar xvzf hadoop-2.7.3.tar.gz
-`
+`tar xvzf hadoop-2.7.3.tar.gz`
+  
 
 * # All Nodes: Setup JAVA_HOME
-On each of the nodes, edit `~/server/hadoop-2.7.3/etc/hadoop/hadoop-env.sh`.
+On each of the nodes, edit 
+  
+  `~/server/hadoop-2.7.3/etc/hadoop/hadoop-env.sh`.
 
 Replace this line:
 `export JAVA_HOME=${JAVA_HOME}`
@@ -168,6 +169,7 @@ With the following line:
 On each node, edit `~/server/hadoop-2.7.3/etc/hadoop/core-site.xml` and replace the following lines:
 `
 <configuration>
+  
 </configuration>
 `
 
@@ -175,13 +177,18 @@ with these (as mentioned above, replace <nnode> with NameNode’s public DNS):
 
 `
 <configuration>
+  
   <property>
+    
     <name>fs.defaultFS</name>
     <value><nnode>:9000</value>
+      
   </property>
+    
 </configuration>
 `
 
+  
 * # All Nodes: Create Data Dir
 HDFS needs the data directory to be present on each node: 1 name node and 3 data nodes. Create this directory as shown and change ownership to user ubuntu.
 
