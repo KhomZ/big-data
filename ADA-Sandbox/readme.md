@@ -147,8 +147,11 @@ Install Apache Hadoop 2.7.3 on all the instances. Obtain the link to download fr
 
 `
 mkdir server
+
 cd server
+
 wget <Link to Hadoop 2.7.3>
+
 tar xvzf hadoop-2.7.3.tar.gz
 `
 
