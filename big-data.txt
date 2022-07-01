@@ -1,0 +1,187 @@
+
+
+
+<property>
+    
+    <name>fs.defaultFS</name>
+    <value><nnode>:9000</value>
+      
+</property>
+
+
+
+----->>
+
+<property>
+    
+    <name>fs.defaultFS</name>
+    <value><ec2-3-80-82-175.compute-1.amazonaws.com>:9000</value>
+      
+</property>
+
+
+
+nnode <NameNode Public DNS>
+ec2-3-80-82-175.compute-1.amazonaws.com
+
+
+
+
+
+
+key-gen
+The key's randomart image is:
++---[RSA 3072]----+
+|      . +.     +B|
+|       * o   . oo|
+|      + o . + o =|
+|       o   B = oo|
+|        S . OoEo.|
+|           * .=oo|
+|          + .  ++|
+|         = +...oo|
+|        +.*o .+..|
++----[SHA256]-----+
+
+
+
+
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>dfs.ec2-3-80-82-175.compute-1.amazonaws.com.name.dir</name>
+    <value>file:///usr/local/hadoop/hdfs/data</value>
+  </property>
+</configuration>
+
+
+
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///usr/local/hadoop/hdfs/data</value>
+  </property>
+</configuration>
+
+
+
+
+editing mapred-site.xml --------------->>>>>>>>>>>>>
+
+<configuration>
+  <property>
+    <name>mapreduce.jobtracker.address</name>
+    <value><nnode>:54311</value>
+  </property>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+</configuration>
+
+
+|||||||||||||||||||||||>>>>>>>>>>>
+<configuration>
+  <property>
+    <name>mapreduce.jobtracker.address</name>
+    <value><ec2-3-80-82-175.compute-1.amazonaws.com>:54311</value>
+  </property>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+</configuration>
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+nano yarn-site.xml
+
+==============
+<configuration>
+
+  <!-- Site specific YARN configuration properties -->
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value><nnode></value>
+  </property>
+
+</configuration>
+
+
+
+
+
+<configuration>
+
+  <!-- Site specific YARN configuration properties -->
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value><ec2-3-80-82-175.compute-1.amazonaws.com></value>
+  </property>
+
+</configuration>
+==============================
+
+
+
+slaves
+DateNode’s public DNS
+ip-172-31-25-247.ec2.internal
+
+?????????
+
+===========================================================================
+hdfs-site.xml
+
+
+<property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:///usr/local/hadoop/hdfs/data</value>
+  </property>
+
+
+
+
+<property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>dfs.ip-172-31-25-247.ec2.internal.data.dir</name>
+    <value>file:///usr/local/hadoop/hdfs/data</value>
+  </property>
+
+
+
+
+
