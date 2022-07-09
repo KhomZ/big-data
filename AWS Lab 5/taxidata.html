@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="24690694-c436-405b-add1-56a8f74dca37" data-root-id="1003"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1184">
+          {"6be56331-0caa-4909-aab5-98f292e49e23":{"defs":[],"roots":{"references":[{"attributes":{"fill_color":{"value":"green"},"hatch_color":{"value":"green"},"line_color":{"value":"green"},"size":{"value":10},"x":{"field":"passenger_count"},"y":{"field":"total_amount"}},"id":"1035","type":"Circle"},{"attributes":{},"id":"1008","type":"LinearScale"},{"attributes":{},"id":"1049","type":"UnionRenderers"},{"attributes":{"axis_label":"Amount paid","coordinates":null,"formatter":{"id":"1044"},"group":null,"major_label_policy":{"id":"1045"},"ticker":{"id":"1017"}},"id":"1016","type":"LinearAxis"},{"attributes":{},"id":"1050","type":"Selection"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"green"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"green"},"line_alpha":{"value":0.1},"line_color":{"value":"green"},"size":{"value":10},"x":{"field":"passenger_count"},"y":{"field":"total_amount"}},"id":"1036","type":"Circle"},{"attributes":{"axis_label":"Passengers","coordinates":null,"formatter":{"id":"1047"},"group":null,"major_label_policy":{"id":"1048"},"ticker":{"id":"1013"}},"id":"1012","type":"LinearAxis"},{"attributes":{},"id":"1006","type":"DataRange1d"},{"attributes":{},"id":"1004","type":"DataRange1d"},{"attributes":{},"id":"1023","type":"SaveTool"},{"attributes":{},"id":"1048","type":"AllLabels"},{"attributes":{"coordinates":null,"data_source":{"id":"1002"},"glyph":{"id":"1035"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1037"},"nonselection_glyph":{"id":"1036"},"view":{"id":"1039"}},"id":"1038","type":"GlyphRenderer"},{"attributes":{},"id":"1024","type":"ResetTool"},{"attributes":{},"id":"1020","type":"PanTool"},{"attributes":{"coordinates":null,"group":null,"text":"Taxi rides"},"id":"1040","type":"Title"},{"attributes":{},"id":"1025","type":"HelpTool"},{"attributes":{},"id":"1044","type":"BasicTickFormatter"},{"attributes":{},"id":"1021","type":"WheelZoomTool"},{"attributes":{"source":{"id":"1002"}},"id":"1039","type":"CDSView"},{"attributes":{"data":{"DOLocationID":[236,236,236,249,141,48,50,231,264,163,87,137,223,163,148,263,232,186,162,79,263,164,107,260,143,229,231,50,141,238,163,82,90,43,236,262,239,249,161,170,249,114,142,140,114,79,148,130,163,211],"PULocationID":[75,231,140,114,186,142,230,48,264,236,82,107,145,238,249,142,144,249,141,137,75,249,164,112,140,68,48,48,237,263,229,132,230,43,237,262,238,164,75,148,158,79,239,186,234,68,142,83,107,164],"RatecodeID":[1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"VendorID":[1,1,1,1,1,1,1,2,1,2,2,1,2,1,2,2,1,2,1,2,1,2,1,1,2,2,2,2,1,1,1,2,1,1,2,1,2,1,1,2,2,1,2,1,2,1,2,2,1,1],"extra":{"__ndarray__":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4D8AAAAAAADgPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA/AAAAAAAAAAAAAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA4D8AAAAAAAAAAAAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAAAAAAAAAAAA4D8AAAAAAAAAAAAAAAAAAOA/AAAAAAAA4D8AAAAAAAAAAAAAAAAAAOA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4D8AAAAAAAAAAAAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAAAAAAAAAAAA4D8AAAAAAADgPw==","dtype":"float64","order":"little","shape":[50]},"fare_amount":{"__ndarray__":"AAAAAAAAEEAAAAAAAIA8QAAAAAAAABpAAAAAAAAAHEAAAAAAAAAnQAAAAAAAABJAAAAAAAAAJEAAAAAAAAAtQAAAAAAAAAxAAAAAAAAAIkAAAAAAAABKQAAAAAAAABpAAAAAAAAAKkAAAAAAAAAoQAAAAAAAACFAAAAAAAAAKUAAAAAAAAAYQAAAAAAAAB5AAAAAAAAAHEAAAAAAAAASQAAAAAAAABhAAAAAAAAAIEAAAAAAAAASQAAAAAAAACtAAAAAAAAALEAAAAAAAAAjQAAAAAAAADVAAAAAAAAAFkAAAAAAAAASQAAAAAAAACFAAAAAAAAAHkAAAAAAAMBAQAAAAAAAAB5AAAAAAAAAFkAAAAAAAAAYQAAAAAAAABBAAAAAAAAAHkAAAAAAAAAiQAAAAAAAAC1AAAAAAAAAJkAAAAAAAAAQQAAAAAAAACJAAAAAAAAAEkAAAAAAAAA0QAAAAAAAABJAAAAAAAAAIUAAAAAAAIAyQAAAAAAAgDRAAAAAAAAAKkAAAAAAAAAoQA==","dtype":"float64","order":"little","shape":[50]},"improvement_surcharge":{"__ndarray__":"MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPzMzMzMzM9M/MzMzMzMz0z8zMzMzMzPTPw==","dtype":"float64","order":"little","shape":[50]},"index":[453383,468988,496095,595593,276926,512538,912543,236198,892285,917891,849332,165159,492815,753544,817211,562815,828880,300229,338558,646640,447826,626185,936988,140972,366709,615678,974090,321431,39881,205013,682678,181957,843420,1008918,927513,375305,36456,885052,511509,14252,880274,94692,610288,898222,841319,690160,277174,407477,833392,272914],"mta_tax":{"__ndarray__":"AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPwAAAAAAAOA/AAAAAAAA4D8AAAAAAADgPw==","dtype":"float64","order":"little","shape":[50]},"passenger_count":[1,1,1,1,1,1,1,1,2,2,5,1,5,1,4,2,1,1,1,5,2,6,1,1,5,5,1,2,1,1,1,6,1,1,6,1,1,2,1,1,2,1,1,1,1,2,1,1,1,1],"payment_type":[2,1,2,1,1,1,1,2,2,1,1,1,1,2,1,1,1,2,2,1,1,1,1,1,1,1,2,2,2,1,1,2,1,1,2,2,2,1,1,2,1,1,1,1,1,1,2,2,2,1],"store_and_fwd_flag":["N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N"],"tip_amount":{"__ndarray__":"AAAAAAAAAABmZmZmZmYXQAAAAAAAAAAAZmZmZmZm+j+amZmZmZkJQM3MzMzMzPA/AAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAAXI/C9Shc/z8AAAAAAAAkQM3MzMzMzPg/FK5H4XoUBkAAAAAAAAAAAFyPwvUoXP8/j8L1KFyPCkAzMzMzMzP3PwAAAAAAAAAAAAAAAAAAAAD2KFyPwvXwPwAAAAAAAPA/AAAAAAAA+D/NzMzMzMzwPwAAAAAAAAAAexSuR+F6CECamZmZmZkFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJqZmZmZmQNAAAAAAAAA/D8AAAAAAAAAAAAAAAAAAPw/AAAAAAAA9D8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAK16NwPQrnPwAAAAAAAPA/j8L1KFyP8j+kcD0K16MQQI/C9Shcj/I/MzMzMzMz/z8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMzMzMFQA==","dtype":"float64","order":"little","shape":[50]},"tolls_amount":{"__ndarray__":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==","dtype":"float64","order":"little","shape":[50]},"total_amount":{"__ndarray__":"MzMzMzMzE0AzMzMzM5NBQDMzMzMzMx1AZmZmZmbmI0AAAAAAAAAwQGZmZmZmZhlAmpmZmZmZJ0CamZmZmZkuQDMzMzMzMxFAhetRuB6FJ0BmZmZmZmZPQDMzMzMzsyJAj8L1KFyPMECamZmZmZkpQIXrUbgehSdAH4XrUbieMEAAAAAAAIAhQJqZmZmZmSFAmpmZmZmZIEBxPQrXo3AZQDMzMzMzMx9AmpmZmZmZJUBmZmZmZmYZQJqZmZmZmS1AXI/C9ShcMkAAAAAAAAArQM3MzMzMzDVAMzMzMzMzG0AzMzMzMzMVQAAAAAAAgChAmpmZmZkZJUBmZmZmZiZBQJqZmZmZGSVAMzMzMzMzHkAzMzMzMzMbQDMzMzMzMxVAmpmZmZmZIECamZmZmZknQJqZmZmZmS5AmpmZmZmZJ0AUrkfhehQWQJqZmZmZmSVA16NwPQrXG0D2KFyPwvU4QNejcD0K1xtAAAAAAACAJ0DNzMzMzMwzQM3MzMzMTDVAmpmZmZmZLEBmZmZmZuYvQA==","dtype":"float64","order":"little","shape":[50]},"tpep_dropoff_datetime":["1/15/2017 12:23","1/15/2017 13:43","1/15/2017 15:01","1/15/2017 20:57","1/14/2017 21:07","1/15/2017 15:54","1/17/2017 10:03","1/14/2017 18:58","1/17/2017 8:47","1/17/2017 10:18","1/17/2017 5:51","1/1/2017 4:18","1/15/2017 14:58","1/16/2017 18:02","1/16/2017 22:12","1/15/2017 18:57","1/16/2017 23:11","1/14/2017 22:27","1/15/2017 0:33","1/1/2017 18:20","1/15/2017 12:05","1/15/2017 23:06","1/17/2017 11:20","1/1/2017 3:04","1/15/2017 2:33","1/15/2017 22:22","1/17/2017 13:54","1/14/2017 23:35","1/1/2017 12:36","1/1/2017 1:08","1/1/2017 21:33","1/1/2017 6:31","1/17/2017 2:11","1/17/2017 15:34","1/17/2017 10:48","1/15/2017 2:59","1/1/2017 12:23","1/17/2017 8:34","1/15/2017 16:07","1/1/2017 10:08","1/17/2017 8:11","1/1/2017 17:40","1/15/2017 21:52","1/17/2017 9:34","1/17/2017 1:19","1/1/2017 22:15","1/14/2017 21:14","1/1/2017 7:03","1/16/2017 23:57","1/14/2017 20:55"],"tpep_pickup_datetime":["1/15/2017 12:21","1/15/2017 13:18","1/15/2017 14:54","1/15/2017 20:48","1/14/2017 20:53","1/15/2017 15:51","1/17/2017 9:48","1/14/2017 18:40","1/17/2017 8:45","1/17/2017 10:06","1/17/2017 5:29","1/1/2017 4:12","1/15/2017 14:43","1/16/2017 17:49","1/16/2017 22:02","1/15/2017 18:43","1/16/2017 23:07","1/14/2017 22:18","1/15/2017 0:27","1/1/2017 18:17","1/15/2017 12:00","1/15/2017 22:58","1/17/2017 11:16","1/1/2017 2:51","1/15/2017 2:16","1/15/2017 22:11","1/17/2017 13:27","1/14/2017 23:30","1/1/2017 12:32","1/1/2017 0:58","1/1/2017 21:24","1/1/2017 6:10","1/17/2017 2:05","1/17/2017 15:28","1/17/2017 10:42","1/15/2017 2:56","1/1/2017 12:15","1/17/2017 8:22","1/15/2017 15:47","1/1/2017 9:57","1/17/2017 8:08","1/1/2017 17:29","1/15/2017 21:49","1/17/2017 9:03","1/17/2017 1:17","1/1/2017 22:07","1/14/2017 20:53","1/1/2017 6:48","1/16/2017 23:42","1/14/2017 20:37"],"trip_distance":{"__ndarray__":"MzMzMzMz4z+amZmZmZkhQJqZmZmZmfE/AAAAAAAA8D/NzMzMzMwAQGZmZmZmZuY/mpmZmZmZ8T/sUbgehesLQJqZmZmZmdk/rkfhehSu8z+uR+F6FC4lQJqZmZmZmfE/XI/C9ShcCUAAAAAAAAAEQHsUrkfhevg/FK5H4XoUBkAzMzMzMzPzP5qZmZmZmfU/ZmZmZmZm9j/2KFyPwvXoP5qZmZmZmek/ZmZmZmZm/j8zMzMzMzPjPzMzMzMzMw9ApHA9CtejCkBmZmZmZmb+P5qZmZmZmRFAPQrXo3A96j8zMzMzMzPTPzMzMzMzM/s/MzMzMzMz8z+amZmZmRknQM3MzMzMzPw/MzMzMzMz4z9SuB6F61HoPzMzMzMzM9M/MzMzMzMz9z8zMzMzMzP7P5qZmZmZmQVAXI/C9ShcBUD2KFyPwvXgP5qZmZmZmfk/9ihcj8L16D+amZmZmZkJQK5H4XoUru8/ZmZmZmZm/j+4HoXrUbgUQLgehetRuBpAMzMzMzMzB0DNzMzMzMz8Pw==","dtype":"float64","order":"little","shape":[50]}},"selected":{"id":"1050"},"selection_policy":{"id":"1049"}},"id":"1002","type":"ColumnDataSource"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1026","type":"BoxAnnotation"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"green"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"green"},"line_alpha":{"value":0.2},"line_color":{"value":"green"},"size":{"value":10},"x":{"field":"passenger_count"},"y":{"field":"total_amount"}},"id":"1037","type":"Circle"},{"attributes":{},"id":"1017","type":"BasicTicker"},{"attributes":{},"id":"1045","type":"AllLabels"},{"attributes":{"tools":[{"id":"1020"},{"id":"1021"},{"id":"1022"},{"id":"1023"},{"id":"1024"},{"id":"1025"}]},"id":"1027","type":"Toolbar"},{"attributes":{"overlay":{"id":"1026"}},"id":"1022","type":"BoxZoomTool"},{"attributes":{},"id":"1047","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"1016"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"1019","type":"Grid"},{"attributes":{"axis":{"id":"1012"},"coordinates":null,"group":null,"ticker":null},"id":"1015","type":"Grid"},{"attributes":{"below":[{"id":"1012"}],"center":[{"id":"1015"},{"id":"1019"}],"left":[{"id":"1016"}],"renderers":[{"id":"1038"}],"title":{"id":"1040"},"toolbar":{"id":"1027"},"x_range":{"id":"1004"},"x_scale":{"id":"1008"},"y_range":{"id":"1006"},"y_scale":{"id":"1010"}},"id":"1003","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1013","type":"BasicTicker"},{"attributes":{},"id":"1010","type":"LinearScale"}],"root_ids":["1003"]},"title":"Bokeh Application","version":"2.4.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('1184').textContent;
+                  const render_items = [{"docid":"6be56331-0caa-4909-aab5-98f292e49e23","root_ids":["1003"],"roots":{"1003":"24690694-c436-405b-add1-56a8f74dca37"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
