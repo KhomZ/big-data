@@ -1,0 +1,10 @@
+readlink -f /usr/bin/java | sed "s:bin/java::"
+/usr/lib/jvm/java-11-openjdk-amd64/
+
+
+
+tokenizer if /t then use /t
+
+
+cluster setup
+
